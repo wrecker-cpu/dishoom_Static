@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.grid-container {
+  @apply grid grid-flow-dense grid-cols-6 gap-x-2 md:grid-cols-20 md:gap-x-3 lg:gap-x-4 xl:gap-x-6;
+}
+
+body{
+  background-color: #f0ece0;
+}
+
+.navbar {
+  position: static;
+  width: 100%;
+  background-color: #f0ece0;
+  transition: position 0.3s ease;
+}
+
+/* Define styles for sticky state */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20; /* Ensure it is above other content */
+}
+
+.select-with-arrow {
+  background-image: url('/arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 12px 12px; /* Adjust the size of the arrow */
+  background-position: calc(100% - 1.5rem) center; /* Move the arrow to the left */
+}
+
+
+.sub-container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) { /* md: in Tailwind is typically 768px */
+  .sub-container {
+    width: 95.15%;
+  }
+}
