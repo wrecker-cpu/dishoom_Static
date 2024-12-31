@@ -13,18 +13,20 @@ import NavBigScreen from "../NavBigScreen";
 export default function ContactDetails() {
   return (
     <>
-    <div className=" border-t border-[#C4BFAF80] sticky block md:hidden top-[104px]  mb-[25px] z-[30]">
-            
-              <NavSmallScreen mapData={ContactPageData.navOptions}/>
-               <div
-            className="border-b border-[#C4BFAF80] bg-[#f0ece0] absolute bottom-0 left-0 right-0 md:hidden"
-            style={{ borderBottomWidth: "1px", borderBottomColor: "#C4BFAF80" }}
-          ></div> 
-            </div>
+      <div className=" border-t border-[#C4BFAF80] sticky block md:hidden top-[104px]  mb-[25px] z-[30]">
+        <NavSmallScreen mapData={ContactPageData.navOptions} />
+        <div
+          className="border-b border-[#C4BFAF80] bg-[#f0ece0] absolute bottom-0 left-0 right-0 md:hidden"
+          style={{ borderBottomWidth: "1px", borderBottomColor: "#C4BFAF80" }}
+        ></div>
+      </div>
       <div className=" sub-container">
         <div className="grid-container py-2 md:py-20 text-[#353839]">
           <div className="  col-start-1 col-end-7 md:col-start-2 md:col-end-8 ">
-            <NavBigScreen mapData={ContactPageData.sideOptions.options} title={ContactPageData.sideOptions.title}/>
+            <NavBigScreen
+              mapData={ContactPageData.sideOptions.options}
+              title={ContactPageData.sideOptions.title}
+            />
           </div>
           <div className="col-start-1 col-end-7 md:col-start-8  md:col-end-20">
             <p className="text-[36px] md:text-[42px] mb-4 font-serif">
@@ -37,9 +39,9 @@ export default function ContactDetails() {
               Enquiries
             </p>
             <p className="tracking-tight text-light-dishoom mb-12 text-[18px] md:text-[18px]">
-              Good. Bad. Ugly. We'd love to hear it. If it's good, we'll feel
-              warm inside and be glad that we made you happy. If it's bad (or
-              god forbid, ugly!) then we'll earnestly convene huddles, figure
+              Good. Bad. Ugly. We&apos;d love to hear it. If it&apos;s good, we&apos;ll feel
+              warm inside and be glad that we made you happy. If it&apos;s bad (or
+              god forbid, ugly!) then we&apos;ll earnestly convene huddles, figure
               out what happened, and put it right.
             </p>
 
@@ -66,7 +68,11 @@ export default function ContactDetails() {
               visible during the aforementioned hours).
             </p>
 
-            <BlackCustomButton custom={true} name="Start a Chat" className="p-[2px] md:inline-block border-2 mb-10 border-[#353839] bg-[#353839]" />
+            <BlackCustomButton
+              custom={true}
+              name="Start a Chat"
+              className="p-[2px] md:inline-block border-2 mb-10 border-[#353839] bg-[#353839]"
+            />
             <div>
               <p className="text-[#353839] text-[16px] mb-4 font-bold font-sans uppercase leading-tight tracking-widest">
                 {ContactPageData.SocioLinks.title}
@@ -78,12 +84,16 @@ export default function ContactDetails() {
                       className="font-serif  text-[15px] lsm:text-[16px] esm:text-[17px] em:text-lg text-[#353839] tracking-tight"
                       key={item.id}
                     >
-                      <a href={item.href} className="whitespace-nowrap hover:opacity-60 transition-opacity ease-in-out duration-150">{item.name}</a>
+                      <a
+                        href={item.href}
+                        className="whitespace-nowrap hover:opacity-60 transition-opacity ease-in-out duration-150"
+                      >
+                        {item.name}
+                      </a>
                     </li>
                   );
                 })}
               </ul>
-             
             </div>
           </div>
         </div>
@@ -91,9 +101,9 @@ export default function ContactDetails() {
       <div className="w-full h-full">
         <ContactBottomRepaterSvg />
       </div>
-      <SomethingElseList/>
-      <ContactThirdImageSection/>
-      <Footer/>
+      <SomethingElseList />
+      <ContactThirdImageSection />
+      <Footer />
     </>
   );
 }
