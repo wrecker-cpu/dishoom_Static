@@ -1,0 +1,4 @@
+Allow: /
+
+
+Sitemap: https://dishoom-static.vercel.app/sitemap.xml
